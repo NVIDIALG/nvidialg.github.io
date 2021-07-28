@@ -23,15 +23,6 @@
   <span id="tooltip"></span>
   <div id="my-map"></div>
   <script>
-    function scale(xMax, xMin, yMax, yMin, yInput) {
-      percent = (yInput - yMin) / (yMax - yMin);
-      return percent * (xMax - xMin) + xMin;
-    }
-
- const c = Math.round(255.0 - scale(0,255,0,20,target)).toString(16).padStart(2, "0");
-      return "#FF" + c + c;
-    }
-
     var tooltipSpan = document.getElementById('tooltip');
     window.onmousemove = function (e) {
         var x = e.clientX, y = e.clientY;
