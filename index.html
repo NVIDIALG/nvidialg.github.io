@@ -6,7 +6,7 @@
   <script type="text/javascript" src="https://unpkg.com/japan-map-js@1.0.1/dist/jpmap.min.js"></script>
   <style>
     body {
-      background-color: #222222
+      background-color: #000000
     }
 
     #tooltip {
@@ -40,27 +40,29 @@
         tooltipSpan.style.left = (x + 16) + 'px';
     };
 
+// _NAGANO_:{en:"Nagano",zh:"",ja:"長野県"},_GIFU_:{en:"Gifu",zh:"",ja:"岐阜県"},_SHIZUOKA_:{en:"Shizuoka",zh:"",ja:"静岡県"},_AICHI_:{en:"Aichi",zh:"",ja:"愛知県"},_MIE_:{en:"Mie",zh:"",ja:"三重県"},_SHIGA_:{en:"Shiga",zh:"",ja:"滋賀県"},_KYOTO_:{en:"Kyoto",zh:"",ja:"京都府"},_OSAKA_:{en:"Osaka",zh:"",ja:"大阪府"},_HYOGO_:{en:"Hyogo",zh:"",ja:"兵庫県"},_NARA_:{en:"Nara",zh:"",ja:"奈良県"},_WAKAYAMA_:{en:"Wakayama",zh:"",ja:"和歌山県"},_TOTTORI_:{en:"Tottori",zh:"",ja:"鳥取県"},_SHIMANE_:{en:"Shimane",zh:"",ja:"島根県"},_OKAYAMA_:{en:"Okayama",zh:"",ja:"岡山県"},_HIROSHIMA_:{en:"Hiroshima",zh:"",ja:"広島県"},_YAMAGUCHI_:{en:"Yamaguchi",zh:"",ja:"山口県"},_TOKUSHIMA_:{en:"Tokushima",zh:"",ja:"徳島県"},_KAGAWA_:{en:"Kagawa",zh:"",ja:"香川県"},_EHIME_:{en:"Ehime",zh:"",ja:"愛媛県"},_KOCHI_:{en:"Kochi",zh:"",ja:"高知県"},_FUKUOKA_:{en:"Fukuoka",zh:"",ja:"福岡県"},_SAGA_:{en:"Saga",zh:"",ja:"佐賀県"},_NAGASAKI_:{en:"Nagasaki",zh:"",ja:"長崎県"},_KUMAMOTO_:{en:"Kumamoto",zh:"",ja:"熊本県"},_OITA_:{en:"Oita",zh:"",ja:"大分県"},_MIYAZAKI_:{en:"Miyazaki",zh:"",ja:"宮崎県"},_KAGOSHIMA_:{en:"Kagoshima",zh:"",ja:"鹿児島県"},_OKINAWA_:{en:"Okinawa",zh:"",ja:"沖縄県"}}}
+
     var d = new jpmap.japanMap(document.getElementById("my-map"), {
       areas: [
-        { "code":1, "color": getColorCode(2), "number": 2 }, 
-        { "code":2, "color": getColorCode(0), "number": 0 },
-        { "code":3, "color": getColorCode(0), "number": 0 },
-        { "code":4, "color": getColorCode(0), "number": 0 },
-        { "code":5, "color": getColorCode(0), "number": 0 },
-        { "code":6, "color": getColorCode(0), "number": 0 },
-        { "code":7, "color": getColorCode(0), "number": 0 },
-        { "code":8, "color": getColorCode(0), "number": 0 },
-        { "code":9, "color": getColorCode(0), "number": 0 },
-        { "code":10, "color": getColorCode(0), "number": 0 },
-        { "code":11, "color": getColorCode(1), "number": 1 },
-        { "code":12, "color": getColorCode(6), "number": 6 },
-        { "code":13, "color": getColorCode(18), "number": 18 },
-        { "code":14, "color": getColorCode(4), "number": 4 },
-        { "code":15, "color": getColorCode(0), "number": 0 },
-        { "code":16, "color": getColorCode(0), "number": 0 },
-        { "code":17, "color": getColorCode(0), "number": 0 },
-        { "code":18, "color": getColorCode(0), "number": 0 },
-        { "code":19, "color": getColorCode(0), "number": 0 },
+        { "code":1, "color": "#FFFFFF", "number": 2 },		// Hokkaido
+        { "code":2, "color": "#4B61D1", "number": 0 },		// Aomori
+        { "code":3, "color": "#000000", "number": 0 },		// Iwate
+        { "code":4, "color": getColorCode(0), "number": 0 },		// Miyagi
+        { "code":5, "color": getColorCode(0), "number": 0 },		// Akita
+        { "code":6, "color": getColorCode(0), "number": 0 },		// Yamagata
+        { "code":7, "color": getColorCode(0), "number": 0 },		// Fukushima
+        { "code":8, "color": getColorCode(0), "number": 0 },		// Ibaraki
+        { "code":9, "color": getColorCode(0), "number": 0 },		// Tochigi
+        { "code":10, "color": getColorCode(0), "number": 0 },		// Gunma
+        { "code":11, "color": getColorCode(1), "number": 1 },		// Saitama
+        { "code":12, "color": getColorCode(6), "number": 6 },		// Chiba
+        { "code":13, "color": getColorCode(18), "number": 18 },		// Tokyo
+        { "code":14, "color": getColorCode(4), "number": 4 },		// Kanagawa
+        { "code":15, "color": getColorCode(0), "number": 0 },		// Niigata
+        { "code":16, "color": getColorCode(0), "number": 0 },		// Toyama
+        { "code":17, "color": getColorCode(0), "number": 0 },		// Ishikawa
+        { "code":18, "color": getColorCode(0), "number": 0 },		// Fukui
+        { "code":19, "color": getColorCode(0), "number": 0 },		// Yamanashi
         { "code":20, "color": getColorCode(0), "number": 0 },
         { "code":21, "color": getColorCode(0), "number": 0 },
         { "code":22, "color": getColorCode(0), "number": 0 },
