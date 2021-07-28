@@ -67,7 +67,7 @@
         { "code":24, "color": "#4B61D1", "been": "Lorenzo Only" },		// Mie
         { "code":25, "color": "#D3D3D3", "been": "Neither" },		// Shiga
         { "code":26, "color": "#D3D3D3", "been": "Neither" },		// Kyoto
-        { "code":27, "color": "#FFFFFF", "been": "Ale Only" },		// Osaka
+        { "code":27, "color": "#000000", "been": "Ale Only" },		// Osaka
         { "code":28, "color": "#D3D3D3", "been": "Neither" },		// Hyogo
         { "code":29, "color": "#D3D3D3", "been": "Neither" },		// Nara
         { "code":30, "color": "#D3D3D3", "been": "Neither" },		// Wakayama
@@ -97,7 +97,7 @@
       onHover: function(data){
         var tt = document.getElementById("tooltip");
 
-		tt.innerHTML = (data.name + ": " + data.been);
+		tt.innerHTML = (data.name + ": " + data.area.been);
         tt.style = "display:block; position:fixed; overflow:hidden;";
       },
       onHoverOut: function(data) {
