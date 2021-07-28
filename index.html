@@ -17,14 +17,25 @@
       position:relative;
       display:none;
     }
+    .indent-1 {float: left;}
+    .indent-1 section {width: 50%; float: left;}
   </style>
 </head>
 <body>
   <span id="tooltip"></span>
-  <div></div>
-	<div align="left" id="my-map"></div>
-	<div align="right">Test</div>
-  </div>
+
+  <section class="indent-1">
+    <!-- Section 1 --> 
+    <section>
+		<div id="my-map"></div>
+    </section>
+
+    <!-- Section 2 -->
+    <section>
+        <div>Test</div>
+	</section>
+  </section>  
+
   <script>
     var tooltipSpan = document.getElementById('tooltip');
     window.onmousemove = function (e) {
