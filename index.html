@@ -90,7 +90,8 @@
         { "code":46, "color": getColorCode(0), "number": 0 },
         { "code":47, "color": getColorCode(1), "number": 1 }
       ],
-      hoverColor: "#ffdd00",
+      lang: 'en',
+	  hoverColor: "#ffdd00",
       movesIslands : true,
       borderLineColor: "#000000",
       width: 1000,
@@ -98,9 +99,11 @@
         var tt = document.getElementById("tooltip");
 
         if (data.area.number == 0) {
-          tt.innerHTML = (data.name);
-        } else {
-          tt.innerHTML = (data.name + " 感染者数: " + data.area.number);
+          tt.innerHTML = (data.name + ": Neither");
+		} else if (data.area.number == 1) {
+		  tt.innerHTML = (data.name + ": Ale Only");
+		} else {
+          tt.innerHTML = (data.name + ": Both");
         }
 
         tt.style = "display:block; position:fixed; overflow:hidden;";
