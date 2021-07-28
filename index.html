@@ -28,23 +28,6 @@
       return percent * (xMax - xMin) + xMin;
     }
 
-    function getColorCode(target) {
-
-		switch (target) {
-			case "BT": // Both Together
-				return "#008C45";
-			case "BS": // Both Separately
-				return "#FFA500";
-			case "LO":
-				return "#4B61D1";
-			case "AO":
-				return "#000000";
-		}
-
-		return "#D3D3D3";
-	}
-
-
  const c = Math.round(255.0 - scale(0,255,0,20,target)).toString(16).padStart(2, "0");
       return "#FF" + c + c;
     }
@@ -67,53 +50,53 @@
 
     var d = new jpmap.japanMap(document.getElementById("my-map"), {
       areas: [
-        { "code":1, "color": getColorCode("BT") },		// Hokkaido
-        { "code":2, "color": "#008C45" },		// Aomori
-        { "code":3, "color": "#008C45" },		// Iwate
-        { "code":4, "color": getColorCode("NE") },		// Miyagi
-        { "code":5, "color": "#D3D3D3" },		// Akita
-        { "code":6, "color": "#D3D3D3" },		// Yamagata
-        { "code":7, "color": "#D3D3D3" },		// Fukushima
-        { "code":8, "color": "#D3D3D3" },		// Ibaraki
-        { "code":9, "color": "#D3D3D3" },		// Tochigi
-        { "code":10, "color": "#D3D3D3" },		// Gunma
-        { "code":11, "color": "#008C45", },		// Saitama
-        { "code":12, "color": "#008C45" },		// Chiba
-        { "code":13, "color": "#008C45" },		// Tokyo
-        { "code":14, "color": "#008C45" },		// Kanagawa
-        { "code":15, "color": "#D3D3D3" },		// Niigata
-        { "code":16, "color": "#D3D3D3" },		// Toyama
-        { "code":17, "color": "#008C45" },		// Ishikawa
-        { "code":18, "color": "#D3D3D3" },		// Fukui
-        { "code":19, "color": "#008C45" },		// Yamanashi
-        { "code":20, "color": "#D3D3D3" },		// Nagano
-        { "code":21, "color": "#008C45" },		// Gifu
-        { "code":22, "color": "#D3D3D3" },		// Shizuoka
-        { "code":23, "color": getColorCode("LO") },		// Aichi
-        { "code":24, "color": getColorCode("LO") },		// Mie
-        { "code":25, "color": "#D3D3D3" },		// Shiga
-        { "code":26, "color": "#D3D3D3" },		// Kyoto
-        { "code":27, "color": getColorCode("AO") },		// Osaka
-        { "code":28, "color": "#D3D3D3" },		// Hyogo
-        { "code":29, "color": "#D3D3D3" },		// Nara
-        { "code":30, "color": "#D3D3D3" },		// Wakayama
-        { "code":31, "color": "#008C45" },		// Tottori
-        { "code":32, "color": "#D3D3D3" },		// Shimane
-        { "code":33, "color": "#D3D3D3" },		// Okayama
-        { "code":34, "color": "#FFA500" },		// Hiroshima
-        { "code":35, "color": "#D3D3D3" },		// Yamaguchi
-        { "code":36, "color": "#D3D3D3" },		// Tokushima
-        { "code":37, "color": "#D3D3D3" },		// Kagawa
-        { "code":38, "color": "#D3D3D3" },		// Ehime
-        { "code":39, "color": "#D3D3D3" },		// Kochi
-        { "code":40, "color": "#D3D3D3" },		// Fukuoka
-        { "code":41, "color": "#008C45" },		// Saga	
-        { "code":42, "color": "#008C45" },		// Nagasaki
-        { "code":43, "color": "#008C45" },		// Kumamoto
-        { "code":44, "color": "#008C45" },		// Oita
-        { "code":45, "color": "#D3D3D3" },		// Miyazaki
-        { "code":46, "color": "#D3D3D3" },		// Kagoshima
-        { "code":47, "color": "#FFA500" }		// Okinawa
+        { "code":1, "color": "#008C45", "been": "Both Together" },		// Hokkaido
+        { "code":2, "color": "#008C45", "been": "Both Together" },		// Aomori
+        { "code":3, "color": "#008C45", "been": "Both Together" },		// Iwate
+        { "code":4, "color": "#D3D3D3", "been": "Neither" },		// Miyagi
+        { "code":5, "color": "#D3D3D3", "been": "Neither" },		// Akita
+        { "code":6, "color": "#D3D3D3", "been": "Neither" },		// Yamagata
+        { "code":7, "color": "#D3D3D3", "been": "Neither" },		// Fukushima
+        { "code":8, "color": "#D3D3D3", "been": "Neither" },		// Ibaraki
+        { "code":9, "color": "#D3D3D3", "been": "Neither" },		// Tochigi
+        { "code":10, "color": "#D3D3D3", "been": "Neither" },		// Gunma
+        { "code":11, "color": "#008C45", "been": "Both Together", },		// Saitama
+        { "code":12, "color": "#008C45", "been": "Both Together" },		// Chiba
+        { "code":13, "color": "#008C45", "been": "Both Together" },		// Tokyo
+        { "code":14, "color": "#008C45", "been": "Both Together" },		// Kanagawa
+        { "code":15, "color": "#D3D3D3", "been": "Neither" },		// Niigata
+        { "code":16, "color": "#D3D3D3", "been": "Neither" },		// Toyama
+        { "code":17, "color": "#008C45", "been": "Both Together" },		// Ishikawa
+        { "code":18, "color": "#D3D3D3", "been": "Neither" },		// Fukui
+        { "code":19, "color": "#008C45", "been": "Both Together" },		// Yamanashi
+        { "code":20, "color": "#D3D3D3", "been": "Neither" },		// Nagano
+        { "code":21, "color": "#008C45", "been": "Both Together" },		// Gifu
+        { "code":22, "color": "#D3D3D3", "been": "Neither" },		// Shizuoka
+        { "code":23, "color": "#4B61D1", "been": "Lorenzo Only" },		// Aichi
+        { "code":24, "color": "#4B61D1", "been": "Lorenzo Only" },		// Mie
+        { "code":25, "color": "#D3D3D3", "been": "Neither" },		// Shiga
+        { "code":26, "color": "#D3D3D3", "been": "Neither" },		// Kyoto
+        { "code":27, "color": "#FFFFFF", "been": "Ale Only" },		// Osaka
+        { "code":28, "color": "#D3D3D3", "been": "Neither" },		// Hyogo
+        { "code":29, "color": "#D3D3D3", "been": "Neither" },		// Nara
+        { "code":30, "color": "#D3D3D3", "been": "Neither" },		// Wakayama
+        { "code":31, "color": "#008C45", "been": "Both Together" },		// Tottori
+        { "code":32, "color": "#D3D3D3", "been": "Neither" },		// Shimane
+        { "code":33, "color": "#D3D3D3", "been": "Neither" },		// Okayama
+        { "code":34, "color": "#FFA500", "been": "Both Separately" },		// Hiroshima
+        { "code":35, "color": "#D3D3D3", "been": "Neither" },		// Yamaguchi
+        { "code":36, "color": "#D3D3D3", "been": "Neither" },		// Tokushima
+        { "code":37, "color": "#D3D3D3", "been": "Neither" },		// Kagawa
+        { "code":38, "color": "#D3D3D3", "been": "Neither" },		// Ehime
+        { "code":39, "color": "#D3D3D3", "been": "Neither" },		// Kochi
+        { "code":40, "color": "#D3D3D3", "been": "Neither" },		// Fukuoka
+        { "code":41, "color": "#008C45", "been": "Both Together" },		// Saga	
+        { "code":42, "color": "#008C45", "been": "Both Together" },		// Nagasaki
+        { "code":43, "color": "#008C45", "been": "Both Together" },		// Kumamoto
+        { "code":44, "color": "#008C45", "been": "Both Together" },		// Oita
+        { "code":45, "color": "#D3D3D3", "been": "Neither" },		// Miyazaki
+        { "code":46, "color": "#D3D3D3", "been": "Neither" },		// Kagoshima
+        { "code":47, "color": "#FFA500", "been": "Both Separately" }		// Okinawa
       ],
       lang: 'en',
 	  hoverColor: "#ffdd00",
@@ -123,18 +106,7 @@
       onHover: function(data){
         var tt = document.getElementById("tooltip");
 
-        if (data.area.color == "#008C45") {
-          tt.innerHTML = (data.name + ": Both Together");
-		} else if (data.area.color == "#FFA500") {
-		  tt.innerHTML = (data.name + ": Both Separately");
-		} else if (data.area.color == "#4B61D1") {
-		  tt.innerHTML = (data.name + ": Lorenzo Only");
-		} else if (data.area.color == "#000000") {
-		  tt.innerHTML = (data.name + ": Ale Only");
-		} else {
-          tt.innerHTML = (data.name + ": Neither");
-        }
-
+		tt.innerHTML = (data.name + ": " + data.been);
         tt.style = "display:block; position:fixed; overflow:hidden;";
       },
       onHoverOut: function(data) {
